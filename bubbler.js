@@ -1,11 +1,21 @@
 //jshint esversion:6
 
-function bubbler(inputArray){
+module.exports = function(inputArray){
   let sorted = false;
+
+  if(inputArray instanceof Array === false){
+    return `Received ${typeof inputArray} while expecting array`;
+  }
+
+  for(i = 0; i < inputArray.length; i++){
+    if(typeof inputArray[i] !== 'number'){
+      return 'Received incomputable input';
+    }
+  }
 
   while(sorted === false){
     sorted = true;
-    for(let i = 0; i < inputArray.length; i++){
+    for(i = 0; i < inputArray.length; i++){
       if(inputArray[i] > inputArray[i + 1]){
         tmp = inputArray[i];
         inputArray[i] = inputArray[i + 1];
@@ -15,6 +25,4 @@ function bubbler(inputArray){
     }
   }
   return inputArray;
-}
-
-console.log(bubbler([10,9,8,6,0,7,6,5,4,3,2,1]));
+};
