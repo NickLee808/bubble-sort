@@ -1,7 +1,6 @@
 //jshint esversion:6
 
 module.exports = function(inputArray){
-  let sorted = false;
 
   if(inputArray instanceof Array === false){
     return `Received ${typeof inputArray} while expecting array`;
@@ -12,6 +11,8 @@ module.exports = function(inputArray){
       return 'Received incomputable input';
     }
   }
+
+  let sorted = false;
 
   while(sorted === false){
     sorted = true;
