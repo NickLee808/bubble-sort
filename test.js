@@ -189,3 +189,63 @@ describe('QUICKER', () => {
   });
 
 });
+
+describe('MERGER', () => {
+
+  describe('Test Cases', () => {
+
+    it('should sort array [3,1,2]', () => {
+      expect(merger([3,1,2])).to.deep.equal([1,2,3]);
+    });
+
+    it('should accept empty arrays', () => {
+      expect(merger([])).to.deep.equal([]);
+    });
+
+    it('should sort arrays with one value', () => {
+      expect(merger([5])).to.deep.equal([5]);
+    });
+
+    it('should sort array with all zeroes', () => {
+      expect(merger([0,0,0,0,0])).to.deep.equal([0,0,0,0,0]);
+    });
+
+    it('should sort array with duplicate values', () => {
+      expect(merger([4,2,2,10,2])).to.deep.equal([2,2,2,4,10]);
+    });
+
+    it('should sort array with decimals', () => {
+      expect(merger([10,0.2,1.6,5,8])).to.deep.equal([0.2,1.6,5,8,10]);
+    });
+
+    it('should sort array with negative values', () => {
+      expect(merger([-1,10,-2,4,0.2])).to.deep.equal([-2,-1,0.2,4,10]);
+    });
+
+  });
+
+  describe('Functionality', () => {
+
+    it('should not accept strings', () => {
+      expect(merger('dildo')).to.deep.equal('Received string while expecting array');
+    });
+
+    it('should not accept numbers', () => {
+      expect(merger(69)).to.deep.equal('Received number while expecting array');
+    });
+
+    it('should not accept booleans', () => {
+      expect(merger(true)).to.deep.equal('Received boolean while expecting array');
+    });
+
+    it('should not accept other objects', () => {
+      expect(merger({})).to.deep.equal('Received object while expecting array');
+    });
+
+    it('should not accept arrays that include non-numbers', () => {
+      expect(merger([2,4,1,'dildo', 3])).to.deep.equal('Received incomputable input');
+    });
+
+  });
+
+});

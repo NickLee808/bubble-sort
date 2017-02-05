@@ -22,10 +22,6 @@ module.exports = function quicker(inputArray){
 
   inputArray.forEach(num => (pivot > num) ? (leftArray.push(num)) : (rightArray.push(num)));
 
-  console.log('l', leftArray);
-  console.log('r', rightArray);
-  console.log('p', pivot);
-
   if(leftArray.length > 1){
     leftArray = quicker(leftArray);
   }
