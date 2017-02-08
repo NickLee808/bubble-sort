@@ -134,8 +134,8 @@ describe('QUICKER', () => {
 
   describe('Test Cases', () => {
 
-    it('should sort array [3,1,2]', () => {
-      expect(quicker([3,1,2])).to.deep.equal([1,2,3]);
+    it('should sort array [5,1,4,2,8]', () => {
+      expect(quicker([5,1,4,2,8])).to.deep.equal([1,2,4,5,8]);
     });
 
     it('should accept empty arrays', () => {
@@ -194,8 +194,8 @@ describe('MERGER', () => {
 
   describe('Test Cases', () => {
 
-    it('should sort array [3,1,2]', () => {
-      expect(merger([3,1,2])).to.deep.equal([1,2,3]);
+    it('should sort array [5,1,4,2,8]', () => {
+      expect(merger([5,1,4,2,8])).to.deep.equal([1,2,4,5,8]);
     });
 
     it('should accept empty arrays', () => {

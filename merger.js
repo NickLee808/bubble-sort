@@ -12,6 +12,10 @@ module.exports = function(inputArray){
     }
   }
 
+  if (inputArray.length <= 1){
+    return inputArray;
+  }
   
-  
+  let mid = Math.floor(inputArray.length / 2);
+
 };
