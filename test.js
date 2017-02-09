@@ -130,6 +130,66 @@ describe('INSERTIONER', () => {
 
 });
 
+describe('SELECTIONER', () => {
+
+  describe('Test Cases', () => {
+
+    it('should sort array [5,1,4,2,8]', () => {
+      expect(selectioner([5,1,4,2,8])).to.deep.equal([1,2,4,5,8]);
+    });
+
+    it('should accept empty arrays', () => {
+      expect(selectioner([])).to.deep.equal([]);
+    });
+
+    it('should sort arrays with one value', () => {
+      expect(selectioner([5])).to.deep.equal([5]);
+    });
+
+    it('should sort array with all zeroes', () => {
+      expect(selectioner([0,0,0,0,0])).to.deep.equal([0,0,0,0,0]);
+    });
+
+    it('should sort array with duplicate values', () => {
+      expect(selectioner([4,2,2,10,2])).to.deep.equal([2,2,2,4,10]);
+    });
+
+    it('should sort array with decimals', () => {
+      expect(selectioner([10,0.2,1.6,5,8])).to.deep.equal([0.2,1.6,5,8,10]);
+    });
+
+    it('should sort array with negative values', () => {
+      expect(selectioner([-1,10,-2,4,0.2])).to.deep.equal([-2,-1,0.2,4,10]);
+    });
+
+  });
+
+  describe('Functionality', () => {
+
+    it('should not accept strings', () => {
+      expect(selectioner('dildo')).to.deep.equal('Received string while expecting array');
+    });
+
+    it('should not accept numbers', () => {
+      expect(selectioner(69)).to.deep.equal('Received number while expecting array');
+    });
+
+    it('should not accept booleans', () => {
+      expect(selectioner(true)).to.deep.equal('Received boolean while expecting array');
+    });
+
+    it('should not accept other objects', () => {
+      expect(selectioner({})).to.deep.equal('Received object while expecting array');
+    });
+
+    it('should not accept arrays that include non-numbers', () => {
+      expect(selectioner([2,4,1,'dildo', 3])).to.deep.equal('Received incomputable input');
+    });
+
+  });
+
+});
+
 describe('QUICKER', () => {
 
   describe('Test Cases', () => {
