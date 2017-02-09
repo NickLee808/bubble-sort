@@ -1,3 +1,11 @@
+Create a README.md file and for each algorithm include the following:
+
+* Explain to a five year old how the algorithm works (3-4 sentences max)
+*Psuedo code for each sorting implementation
+*In your own words, describe the performance of the alogirthm for the following cases:
+    * Best case scenario
+    * Worst case scenario
+
 There are many algorithms that deal with sorting collections of data. One of the most basic forms of sorting is known as __Bubble Sort__ and is named by it's nature of the order of data having a "bubbling" effect as a collection of data is sorted. We will start off by implementing a Bubble Sort algorithm on a one-dimensional Array.
 
 ###Bubble Sort Implementation
