@@ -30,25 +30,13 @@ function merge(leftArray, rightArray){
   let returnArray = [];
 
   while(leftArray.length > 0 && rightArray.length > 0 ){
-    if (leftArray[0] > rightArray[0]){
-      returnArray.push(rightArray[0]);
-      rightArray.splice(0, 1);
+    if (leftArray[0] >= rightArray[0]){
+      returnArray.push(rightArray.shift());
     }else{
-      returnArray.push(leftArray[0]);
-      leftArray.splice(0, 1);
+      returnArray.push(leftArray.shift());
     }
   }
 
-  while (leftArray.length > 0){
-    returnArray.push(leftArray[0]);
-    leftArray.splice(0, 1);
-  }
-
-  while (rightArray.length > 0){
-    returnArray.push(rightArray[0]);
-    rightArray.splice(0, 1);
-  }
-
-  return returnArray;
+  return returnArray.concat(leftArray, rightArray);
 
 }
