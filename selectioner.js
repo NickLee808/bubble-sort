@@ -12,6 +12,20 @@ module.exports = function(inputArray){
     }
   }
 
-  
-  
+  for (i = 0; i < inputArray.length; i++){
+    let tmp = i, currentMinimum = inputArray[i];
+
+    for (j = i + 1; j < inputArray.length; j++){
+      if(inputArray[j] < currentMinimum){
+        tmp = j;
+        currentMinimum = inputArray[j];
+      }
+    }
+
+    inputArray[tmp] = inputArray[i];
+    inputArray[i] = currentMinimum;
+  }
+
+  return inputArray;
+
 };
