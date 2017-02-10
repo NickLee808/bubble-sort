@@ -52,7 +52,7 @@ If the array is already in the proper order, the insertion sort will simply pass
 
 #### Worst-case scenario
 
-If the array is sorted backwards, the insertion sort would have to pick up, compare, and insert every single item into its proper place as it traverses the list, giving it a complexity of *O(n^{2})*.
+If the array is sorted backwards, the insertion sort would have to pick up, compare, and insert every single item into its proper place as it traverses the list, giving it a complexity of *O(n<sup>2</sup>})*.
 
 ## Selection Sort
 
@@ -80,11 +80,11 @@ selectionSort (array) {
 
 #### Best-case scenario
 
-
+O(n2)
 
 #### Worst-case scenario
 
-
+O(n2)
 
 ## Quick Sort
 
