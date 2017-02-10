@@ -80,11 +80,11 @@ selectionSort (array) {
 
 #### Best-case scenario
 
-O(n<sup>2</sup>)
+*O(n<sup>2</sup>)*
 
 #### Worst-case scenario
 
-O(n<sup>2</sup>)
+*O(n<sup>2</sup>)*
 
 ## Quick Sort
 
