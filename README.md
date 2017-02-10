@@ -9,7 +9,7 @@ bubbleSort (array) {
   set sorted state to false;
   while (sorted state is false) {
     change sorted state to true;
-    loop through (array) {
+    loop through array {
       if (first item in array > next item in array){
         swap items;
         change sorted state to false;
@@ -61,7 +61,21 @@ If the array is sorted backwards, the insertion sort would have to pick up, comp
 #### Pseudocode
 
 ```
-
+selectionSort (array) {
+  loop through array{
+    set thisIndex to i;
+    set currentMinimum to current index;
+    loop through unsorted remainder of array{
+      if(current index of this loop < currentMinimum){
+        set current index of this loop to next item's index;
+        set currentMinimum to this item;
+      }
+    }
+    set array[thisIndex] to array[i];
+    array[i] = currentMinimum;
+  }
+  return array;
+};
 ```
 
 #### Best-case scenario
