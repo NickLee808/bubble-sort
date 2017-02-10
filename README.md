@@ -26,7 +26,7 @@ If the array is already in the proper order, the bubble sort will simply pass th
 
 #### Worst-case scenario
 
-If the array is sorted backwards, the bubble sort would have to compare, swap, and traverse through the list for every single item, giving it a complexity of *O(n^{2})*. With more items, it becomes even more impractical.
+If the array is sorted backwards, the bubble sort would have to compare, swap, and traverse through the list for every single item, giving it a complexity of *O(n<sup>2</sup>)*. With more items, it becomes even more impractical.
 
 ## Insertion Sort
 
