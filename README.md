@@ -1,24 +1,14 @@
 Create a README.md file and for each algorithm include the following:
 
 * Explain to a five year old how the algorithm works (3-4 sentences max)
-*Psuedo code for each sorting implementation
-*In your own words, describe the performance of the alogirthm for the following cases:
+* Psuedo code for each sorting implementation
+* In your own words, describe the performance of the alogirthm for the following cases:
     * Best case scenario
     * Worst case scenario
 
-There are many algorithms that deal with sorting collections of data. One of the most basic forms of sorting is known as __Bubble Sort__ and is named by it's nature of the order of data having a "bubbling" effect as a collection of data is sorted. We will start off by implementing a Bubble Sort algorithm on a one-dimensional Array.
+###Bubble Sort
 
-###Bubble Sort Implementation
-The trick to remembering bubble sort is to visualize that your array is vertical rather than horizontal. If smaller values are "deeper" in the array, they will "rise" to the top until they are the smallest value. If larger values are "higher" in the array, they will sink to the bottom until they are the largest value.
+Bubbles go up from underwater because air is lighter than water. In a bubble sort, the first item traverses (or "bubbles") through the list and swaps position with the next item if the next item is larger (or "heavier") than itself. The item will keep traversing through the list until it reaches the end or when the next item is no longer larger, in which case, the item at the start of this new list takes over and begins its journey bubbling up. This process repeats over and over again until no more swaps can be made.
 
-###Your challenge
-1. Create a project and a repo for your Bubble Sort implementation. You probably want a README as well.
-2. Add Mocha/Chai to your project for writing your tests against your function.
-3. Write your tests __FIRST__ that will indicate that your sorting function works with multiple inputs.
-4. Implement a function that will take an input Array and apply the bubble sort algorithm to sort the input and return the number of moves that were necessary to sort the Array.
+###Insertion Sort
 
-###Extra
-Create a way for all Arrays to be able to use your bubble sort function as a method of the Array object.
-
-###Super Extra
-Write a browser tool that will visually show the array and it's values as they are being sorted to see how the elements are moving in real time. It will be impossible to see things being sorted in real time, so you may need to tweak your function to make this work or find new ways of calling it.
